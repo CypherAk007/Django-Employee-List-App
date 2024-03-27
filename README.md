@@ -17,3 +17,6 @@
 - AUTH_PASSWORD_VALIDATORS - builtin pwd validator
 - USE_I18N = allow multiple lang
 - STATIC_URL
+
+## DB Schema
+- https://drawsql.app/teams/cypherak/diagrams/employee-list
