@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+const App = () => {
+  const [employees, setEmployees] = useState([]);
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      const { data } = await axios.get("/api/employees");
+      console.log(data, typeof data);
+      setEmployees(data);
+    };
+    fetchEmployees();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Employee List</h1>
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Full Name</th>
+          <th>Designation</th>
+          <th>phone Number</th>
+        </tr>
+        {employees && employees.map((employee) => {
+          console.log(employee.id);
+          return (<tr>
+            <td>{employee.id} </td>
+            <td>{employee.name}</td>
+            <td>{employee.designation}</td>
+            <td>{employee.phone}</td>
+          </tr>)
+          
+        })}
+      </table>
+      {/* {employees} */}
     </div>
   );
-}
+};
 
 export default App;
