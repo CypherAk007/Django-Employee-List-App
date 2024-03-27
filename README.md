@@ -20,3 +20,13 @@
 
 ## DB Schema
 - https://drawsql.app/teams/cypherak/diagrams/employee-list
+
+## Django REST Framework
+- https://www.django-rest-framework.org/#installation
+
+
+
+
+
+## Errors 
+- Django: OperationalError No Such Table =>  python manage.py migrate
