@@ -9,7 +9,7 @@ from .employees import employees
 def getRoutes(request):
     routes = [
         '/api/employees',
-        '/api/employees/<id>',
+        '/api/employee/<id>',
     ]
     return Response(routes)
 

@@ -24,7 +24,9 @@
 ## Django REST Framework
 - https://www.django-rest-framework.org/#installation
 
-
+## Redux
+- npm install redux react-redux 
+- npm install @reduxjs/toolkit
 
 
 
