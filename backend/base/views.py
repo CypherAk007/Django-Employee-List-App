@@ -4,7 +4,8 @@ from django.shortcuts import render
 # django rest framwork 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .employees import employees
+from .serializers import EmployeeSerializer
+# from .employees import employees
 @api_view(['GET'])
 def getRoutes(request):
     routes = [
@@ -13,16 +14,15 @@ def getRoutes(request):
     ]
     return Response(routes)
 
-
+from .models import Employee
 @api_view(['GET'])
 def getEmployees(request):
-    return Response(employees)
+    employees = Employee.objects.all()
+    serializer = EmployeeSerializer(employees,many=True)
+    return Response(serializer.data)
 
 @api_view(['GET'])
 def getEmployee(request,pk):
-    employee = None 
-    for i in employees:
-        if i['id']==pk:
-            employee = i 
-            break
-    return Response(employee)
+    employee = Employee.objects.get(id=pk)
+    serializer = EmployeeSerializer(employee,many=False)
+    return Response(serializer.data)

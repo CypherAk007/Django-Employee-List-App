@@ -30,7 +30,7 @@ const EmployeeScreen = () => {
   }
   return (
     <div>
-      {/* <img src={employee.image}></img> */}
+      <img src={employee.image}></img>
         <div>{employee.name}</div>
         <div>{employee.designation}</div>
         <div>{employee.email}</div>
