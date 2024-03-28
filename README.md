@@ -28,6 +28,9 @@
 - npm install redux react-redux 
 - npm install @reduxjs/toolkit
 
+## Router
+- npm install react-router-dom
+
 
 
 ## Errors 
