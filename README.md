@@ -33,6 +33,25 @@
 ## Router
 - npm install react-router-dom
 
+## Images in DB
+- ![terminal](images/pillow.png)
+- 1.how to store images in STATIC Folder By default
+- create static folder in backend-base dir
+- let django know about it settings.py
+- STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+- 
+- 2.how to put user images into static/images?
+- settings.py -> MEDIA_ROOT = 'static/images'
+- 
+- 3.Link MEDIA_ROOT & MEDIA_URL 
+- MEDIA_URL = '/images/'
+- settings.py -> from django.conf import settings #used to work with variables fm setting.py
+- from django.conf.urls.static import static #used to work with urls
+- urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #which folder to look into
+
+
 
 
 ## Errors 

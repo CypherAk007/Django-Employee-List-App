@@ -17,7 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+from django.conf import settings #used to work with variables fm setting.py
+from django.conf.urls.static import static #used to work with urls
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('base.urls')),
+
 ]
+
+urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #which folder to look into
