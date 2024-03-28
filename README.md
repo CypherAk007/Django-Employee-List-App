@@ -56,3 +56,7 @@
 
 ## Errors 
 - Django: OperationalError No Such Table =>  python manage.py migrate
+
+## APP Outline
+- ![Alt text](images/app1.png)
+- ![Alt text](images/app2.png)
