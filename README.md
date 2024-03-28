@@ -3,8 +3,10 @@
 ## Django Commands
 ### Create New App
 - python manage.py startapp <app_name>
-### Create Super User 
+### Create Super User (CREATE ADMIN USER)
 - python manage.py createsuperuser
+- ![terminal](images/createAdmin.png)
+- http://127.0.0.1:8000/admin/
 ### Changing Password
 - python manage.py changepassword <your_user_name>
 ## ABOUT Settings.py
